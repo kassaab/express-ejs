@@ -24,8 +24,20 @@ app.get('/',(req,res)=>{
 
 //about page/url
 app.get('/about',(req,res)=>{
-    let title = "About Page";
+    let title = "About Me";
     res.render('pages/about',{'title': title});
+});
+
+//skills page/url
+app.get('/skills',(req,res)=>{
+    let title = "Skills";
+    res.render('pages/skills',{'title': title});
+});
+
+//projects page/url
+app.get('/projects',(req,res)=>{
+    let title = "Projects";
+    res.render('pages/projects',{'title': title});
 });
 
 //users route
