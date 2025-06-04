@@ -11,7 +11,7 @@ const app = express();
 app.set('view engine','ejs');
 
 //this will allow us to serve up static files, CSS, images & JS
-app.use(express.static('_dirname')); //was 'public'
+app.use(express.static('public'));
 
 //reference test json file of users
 var data = require('./test.json');
