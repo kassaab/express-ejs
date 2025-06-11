@@ -66,6 +66,10 @@ app.get('/users/view/:id', function(req, res) {
  });
 });
 
+//All of our routes w10
+const recipeRoutes = require('./routes/recipes');
+app.use('/recipes', recipeRoutes);
+
 //Set server to listen for requests
 app.listen(port, () => {
   console.log(`Server running at port: ${port}`);
