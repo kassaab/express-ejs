@@ -26,12 +26,15 @@ app.use((req, res, next) => {
   next();
 });
 
+//allows us to delete records - add just below express
+const methodOverride = require('method-override');
+app.use(methodOverride('_method'));
 
 //ejs is a templating engine
 app.set('view engine','ejs');
 
 //this will allow us to serve up static files, CSS, images & JS
-app.use(express.static('public'));
+app.use(express.static(__dirname));
 
 //reference test json file of users
 var data = require('./test.json');
